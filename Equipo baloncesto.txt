@@ -1,0 +1,130 @@
+Entidades de mi Base de Datos
+
+                    +-----------------+
+                    |      Equipo     |
+                    +-----------------+
+                    | ID_equipo       |
+                    | nombre_equipo   |
+                    | ubicacion       |
+                    | anio_fundacion  |
+                    | estadio         |
+                    +-----------------+
+                          |
+                          |
+                          |    1
+                          |
+                  +--------------------+
+                  |   Cuerpo Técnico   |
+                  +--------------------+
+                  | ID_ctecnico       |
+                  | ID_equipo         |
+                  +--------------------+
+                          |
+              +-----------+-----------+
+              |                       |
+              |                       |
++-----------------+       +------------------+
+|   Fisioterapeuta |       | Primer Entrenador|
++-----------------+       +------------------+
+| ID_fisioterapeuta|       | ID_primer_entrenador|
+| nombre           |       | nombre            |
+| apellido         |       | apellido          |
+| fecha_nacimiento |       | fecha_nacimiento  |
+| nacionalidad     |       | nacionalidad      |
+| experiencia      |       | experiencia       |
+| historial        |       | historial         |
++-----------------+       +------------------+
+
+              +-----------+-----------+
+              |                       |
+              |                       |
++-----------------+       +------------------+
+|  Segundo Entrenador|     | Preparador Físico|
++-----------------+       +------------------+
+| ID_segundo_entrenador|  | ID_preparador_fisico|
+| nombre           |       | nombre            |
+| apellido         |       | apellido          |
+| fecha_nacimiento |       | fecha_nacimiento  |
+| nacionalidad     |       | nacionalidad      |
+| experiencia      |       | experiencia       |
+| historial        |       | historial         |
++-----------------+       +------------------+
+
+              +-----------+-----------+
+              |                       |
+              |                       |
++-----------------+       +------------------+
+|      Delegado    |       |      Médico      |
++-----------------+       +------------------+
+| ID_delegado      |       | ID_medico        |
+| nombre           |       | nombre           |
+| apellido         |       | apellido         |
+| fecha_nacimiento |       | fecha_nacimiento |
+| nacionalidad     |       | nacionalidad     |
+| experiencia      |       | experiencia      |
+| historial        |       | historial        |
++-----------------+       +------------------+
+
+                          |
+                          |
+                          |    1
+                          |
+                  +--------------------+
+                  |      Jugador       |
+                  +--------------------+
+                  | ID_jugador         |
+                  | nombre             |
+                  | apellido           |
+                  | fecha_nacimiento   |
+                  | nacionalidad       |
+                  | posicion           |
+                  | altura             |
+                  | peso               |
+                  | numero_camiseta    |
+                  | estadisticas       |
+                  | ID_equipo          |
+                  +--------------------+
+                          |
+                          |    N
+                          |
+                  +--------------------+
+                  |      Partido       |
+                  +--------------------+
+                  | ID_partido         |
+                  | fecha              |
+                  | hora               |
+                  | lugar              |
+                  | rival              |
+                  | resultado          |
+                  | estadisticas       |
+                  +--------------------+
+                          |
+                          |    1
+                          |
+                  +--------------------+
+                  |   Estadisticas     |
+                  +--------------------+
+                  | ID_estadisticas    |
+                  | temporada          |
+                  | partidos_jugados   |
+                  | partidos_ganados   |
+                  | partidos_perdidos  |
+                  | porcentaje_victorias|
+                  | promedio_puntos_anotados|
+                  | promedio_puntos_recibidos|
+                  +--------------------+
+                          |
+                          |    N
+                          |
+                  +--------------------+
+                  |       Lesion       |
+                  +--------------------+
+                  | ID_lesion          |
+                  | jugador_afectado   |
+                  | descripcion        |
+                  | fecha_inicio       |
+                  | fecha_recuperacion |
+                  | duracion_estimada  |
+                  +--------------------+
+
+

@@ -1,0 +1,42 @@
+Entidad: Usuarios
+
+Atributos:
+ID_Usuario: Identificador único del usuario.
+Nombre: Nombre del usuario.
+Email: Dirección de correo electrónico del usuario.
+FechaRegistro: Fecha en que el usuario se registró en el blog.
+Entidad: Posts
+
+Atributos:
+ID_Post: Identificador único del post.
+Título: Título del post.
+Contenido: Contenido del post.
+FechaPublicación: Fecha en que se publicó el post.
+ID_Usuario: Identificador del usuario que publicó el post.
+Entidad: Comentarios
+
+Atributos:
+ID_Comentario: Identificador único del comentario.
+Contenido: Contenido del comentario.
+FechaComentario: Fecha en que se hizo el comentario.
+ID_Post: Identificador del post al que pertenece el comentario.
+ID_Usuario: Identificador del usuario que hizo el comentario.
+Entidad: Etiquetas
+
+Atributos:
+ID_Etiqueta: Identificador único de la etiqueta.
+NombreEtiqueta: Nombre de la etiqueta.
+Además, podemos tener las siguientes relaciones:
+
+Relación: Publica
+
+Usuarios (1:N) Publica Posts: Un usuario puede publicar muchos posts, pero cada post es publicado por un único usuario.
+Relación: Comenta
+
+Usuarios (1:N) Comenta Comentarios: Un usuario puede hacer muchos comentarios, pero cada comentario es hecho por un único usuario.
+Relación: Pertenece a
+
+Comentarios (1:1) Pertenece a Posts: Cada comentario pertenece a un único post, aunque un post puede tener muchos comentarios.
+Relación: Tiene
+
+Posts (1:N) Tiene Etiquetas: Un post puede tener muchas etiquetas, y una etiqueta puede estar en muchos posts. Esta es una relación de muchos a muchos que se podría resolver con una entidad intermedia si se requiere.
